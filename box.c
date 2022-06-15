@@ -6,15 +6,17 @@
 #include "box.h"
 
 void createBox(Box **b, int init_cap) {
-    b = malloc((init_cap + 2)*sizeof(int));
-    *b->size = 0;
-    b->
+    Box *con;
+    con->cap = init_cap;
+    con->size = 0;
+    con->data = malloc(sizeof(int) * init_cap);
+    *b = con;
 }
 
 void insert(Box *b, int elem) {
     if (b->size == b->cap) {
         b->cap = b->cap * 2;
-        b->data = realloc(*b->data, sizeof(int) * b->cap);
+        b->data = realloc(b->data, sizeof(int) * b->cap);
     }
     *(b->data + b->size) = elem;
     b->size++;
@@ -49,7 +51,7 @@ double getMean(Box *b) {
 }
 
 void dealloc(Box **b) {
-    free(&b);
+    free(b);
 }
 
 /*
@@ -89,7 +91,7 @@ int main(int argc, char **argv)
 {
     Box *b1 = NULL;
     Box *b2 = NULL;
-
+    
     createBox(&b1, 1);
     createBox(&b2, 2);
 
