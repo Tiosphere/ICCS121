@@ -6,14 +6,18 @@
 #include "box.h"
 
 void createBox(Box **b, int init_cap) {
-    Box *con;
-    con->cap = init_cap;
-    con->size = 0;
-    con->data = malloc(sizeof(int) * init_cap);
-    *b = con;
+    (*b) = malloc(sizeof(int) * 2);
+    (*b)->cap = init_cap;
+    (*b)->size = 0;
+    (*b)->data = malloc(sizeof(int) * init_cap);
+    // printf("*b: %d\n", (**b).cap);
+    // printf("*b: %d\n", (*b)->size);
+    // printf("FINISH\n");
 }
 
 void insert(Box *b, int elem) {
+    // printf("Insert %d\n", elem);
+    // printf("Current size: %d Current cap: %d\n", b->size, b->cap);
     if (b->size == b->cap) {
         b->cap = b->cap * 2;
         b->data = realloc(b->data, sizeof(int) * b->cap);
@@ -23,10 +27,11 @@ void insert(Box *b, int elem) {
 }
 
 void removeAll(Box *b, int elem) {
-    int *temp = malloc(b->cap*sizeof(int));
+    int *temp = malloc(sizeof(int) * b->cap);
     int count = 0;
     for (int i = 0; i < b->size; i++)
     {
+        // printf("Index: %d item: %d elem: %d\n", i, *(b->data + i), elem);
         if (*(b->data + i) != elem)
         {
             *(temp + count) = *(b->data + i);
@@ -34,6 +39,7 @@ void removeAll(Box *b, int elem) {
         }
     }
     b->data = temp;
+    b->size = count;
 }
 
 void printBox(Box *b) {
@@ -51,7 +57,8 @@ double getMean(Box *b) {
 }
 
 void dealloc(Box **b) {
-    free(b);
+    free((*b)->data);
+    free((*b));
 }
 
 /*
