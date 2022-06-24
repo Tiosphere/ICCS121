@@ -28,6 +28,7 @@ double compute_det(int **a, int n){
             else{
                 det += a[0][pos] * compute_det(tmp, n-1);
             }
+            for (int i = 0; i < n-1; i++){free(tmp[i]);}
             free(tmp);
         }
         return det;
@@ -50,4 +51,7 @@ int main(void){
         matrix[i] = arr;
     }
     printf("%f", compute_det(matrix, size));
+    for(int i = 0; i < size; i++){
+        free(matrix[i]);
+    }
 }

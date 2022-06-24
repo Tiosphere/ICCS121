@@ -38,6 +38,7 @@ void removeAll(Box *b, int elem) {
             count++;
         }
     }
+    free(b->data);
     b->data = temp;
     b->size = count;
 }
