@@ -1,0 +1,33 @@
+Problem 3: fun2
+Problem 5: 
+int dog(int x, int y)
+{
+	int i, result;
+	result = 1;
+	for (i = y; y < x; y +=2 ) {
+		result = ressult * x
+	}
+	return result;
+}
+Problem 7:
+int frog(int a, int b)
+{
+	int result;
+	switch(a){
+		case 1:
+		case 5:
+			result = 7;
+			break;
+		case 3:
+			result = b - 1;
+			break;
+		case 7:
+			break;
+		case 6:
+			result = b + 1;
+			break;
+		default:
+			result = -1;
+		}
+	return result;
+}

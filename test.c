@@ -3,14 +3,11 @@
 #include<stdlib.h>
 #include<ctype.h>
 
-void main()
+int fun1(int i, int j)
 {
-    int *a;
-    a = malloc(sizeof(int) * 10);
-    for (int size = 0; size < 10; size++) {
-        *(a + size) = size;
-    }
-    for (int size = 0; size < 12; size++) {
-        printf("%d\n", *(a + size));
-    }
+    if(i+3 != j)
+        return i+3;
+    else
+        return j*16;
 }
+

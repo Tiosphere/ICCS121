@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "bubblesort.h"
 
-void sort(Entry **in, int nL, void *comparator) {
+void sort(Entry *in, int nL, void *comparator) {
     // IMPLEMENT
     for(int i = 0; i < nL; i++){
         printf("%d %s\n", in[i]->data, &in[i]->name);
