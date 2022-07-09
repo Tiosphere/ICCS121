@@ -1,0 +1,15 @@
+https://blog.katastros.com/a?ID=00400-c03badce-6396-41a1-8420-a56cafb56511
+https://github.com/jianggao0612/CSAPP15213/blob/master/datalab-handout/bits.c
+https://www.reddit.com/r/learnprogramming/comments/5561v1/c_bit_operators_checking_if_x_is_between_two/
+https://stackoverflow.com/questions/5061093/dividing-by-power-of-2-using-bit-shifting
+
+https://github.com/terryschmidt/SystemsPrograms/blob/master/bits.c
+
+divpwr2
+https://github.com/codinfox/15213-labs/blob/master/datalab/bits.c
+
+isLessOrEqual
+https://www.coursehero.com/file/p21fgis/
+
+fitsBits
+https://www.chegg.com/homework-help/questions-and-answers/fits-bits-return-1-x-represented-n-bit-two-s-complement-integer-1-~-~n-1-return-x-x-1-isne-q67832086
