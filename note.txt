@@ -1,0 +1,11 @@
+7FF = 1*11
+3FF = 1*10
+L1:
+offset = 2 ^ 4
+set-index = 2 ^ 1
+tag = 11
+
+L2:
+offset = 2 ^ 4
+set-index = 2 ^ 2
+tag = 10
